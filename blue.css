@@ -24,7 +24,7 @@ html, body {
 	width: 40%;
 }
 #logo img {
-	height: 60%;
+	width: 100%;
 }
 
 #words {
@@ -53,14 +53,23 @@ html, body {
 	line-height: 3em;
 }
 
+#banners {
+	margin: 10% auto;
+}
 .banner {
 	width: 100%;
-	height: 100px;
+	height: 150px;
 	background-size: 100% auto;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
-	margin: 10px 0;
-	background-color: #333;
+	margin: 0;
+	/*margin: 10px auto;*/
+
+	text-align: right;
+	color: rgba(255,255,255,0.2);
+}
+.banner:hover {
+	color: white;
 }
 #banner1 {
 	background-image: url("1.png");
@@ -71,10 +80,13 @@ html, body {
 #banner3 {
 	background-image: url("2.png");
 }
-/*#banner4 {
-	background-image: url("4.png");
+#banner4 {
+	background-image: url("4.jpg");
 }
-*/
+#banner4:hover {
+	color: black;
+}
+
 h1 {
 	font-weight: 100;
 	font-family: Lato;
@@ -84,9 +96,109 @@ h1 {
 
 	font-size: 3em;
 }
+.center {
+	letter-spacing: normal;
+	text-align: center;
+}
+
+p {
+	font-size: 1.2em;
+}
+
+a {
+	color: white;
+	font-size: 1.8em;
+}
 
 .fade1 { color: rgba(255,255,255,0.3); }
 .fade2 { color: rgba(255,255,255,0.4); }
 .fade3 { color: rgba(255,255,255,0.5); }
 .fade4 { color: rgba(255,255,255,0.7); }
 .fade5 { color: rgba(255,255,255,0.8); font-weight: 400;}
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+	html {
+		font-size: 0.70em;
+	}
+
+	p {
+		font-size: 1.5em;
+	}
+
+	.banner {
+		background-size: auto 100%;
+		background-position: center;
+		background-attachment: scroll;
+	}
+
+	#words {
+		margin-left: 10%
+	}
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+	html {
+		font-size: 0.70em;
+	}
+
+	p {
+		font-size: 1.5em;
+	}
+
+	.banner {
+		background-position: center;
+		background-attachment: scroll;
+	}
+
+	#words {
+		margin-left: 10%
+	}
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+	html {
+		font-size: 0.70em;
+	}
+
+	p {
+		font-size: 1.5em;
+	}
+
+	.banner {
+		background-size: auto 100%;
+		background-position: center;
+		background-attachment: scroll;
+	}
+
+	#words {
+		margin-left: 10%
+	}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) {
+	/*undo small sizings*/
+	html {
+		font-size: 1em;
+	}
+
+	p {
+		font-size: 1.2em;
+	}
+
+	.banner {	
+		background-size: 100% auto;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+	}
+
+	#words {
+		margin-left: 30%;
+	}
+}
